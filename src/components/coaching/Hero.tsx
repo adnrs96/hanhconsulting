@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-creative-tech.jpg";
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -77,16 +78,23 @@ const Hero = () => {
             style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}
           >
             <Button 
+              asChild
               size="lg" 
               className="btn-premium rounded-none text-base h-14 px-10"
             >
-              Book a Discovery Call
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <Link to="/contact">
+                Book a Discovery Call
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
             <Button 
               variant="outline" 
               size="lg"
               className="rounded-none text-base h-14 px-10 border-muted-foreground/30 hover:border-primary hover:text-primary"
+              onClick={() => {
+                const element = document.getElementById('services');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               Learn Our Approach
             </Button>
