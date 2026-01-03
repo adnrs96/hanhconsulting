@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -11,6 +11,8 @@ import {
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,11 +23,31 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { label: "Services", href: "#services" },
-    { label: "About", href: "#about" },
-    { label: "Testimonials", href: "#testimonials" },
+    { label: "Services", href: "/#services" },
+    { label: "About", href: "/#about" },
+    { label: "Testimonials", href: "/#testimonials" },
     { label: "Contact", href: "/contact" },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('/#')) {
+      e.preventDefault();
+      const sectionId = href.substring(2);
+      
+      if (location.pathname === '/') {
+        // Already on homepage, just scroll
+        const element = document.getElementById(sectionId);
+        element?.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Navigate to homepage then scroll
+        navigate('/');
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          element?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  };
 
   return (
     <header 
@@ -48,10 +70,11 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              link.href.startsWith('#') ? (
+              link.href.startsWith('/#') ? (
                 <a
                   key={link.label}
                   href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors link-underline"
                 >
                   {link.label}
@@ -95,11 +118,14 @@ const Header = () => {
               <div className="flex flex-col h-full pt-12">
                 <nav className="flex flex-col gap-6">
                   {navLinks.map((link) => (
-                    link.href.startsWith('#') ? (
+                    link.href.startsWith('/#') ? (
                       <a
                         key={link.label}
                         href={link.href}
-                        onClick={() => setIsOpen(false)}
+                        onClick={(e) => {
+                          handleNavClick(e, link.href);
+                          setIsOpen(false);
+                        }}
                         className="text-2xl font-serif font-medium text-foreground hover:text-primary transition-colors"
                       >
                         {link.label}
