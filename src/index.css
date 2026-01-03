@@ -2,152 +2,132 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Premium Coaching Design System - Hanh Consulting
+   Brand: Authority + Guide | Calm Confidence | Transformation
+   Palette: Deep Charcoal + Warm Copper/Bronze + Soft Platinum
 */
 
 @layer base {
   :root {
-    --background: 220 20% 3%;
-    --foreground: 0 0% 98%;
+    /* Core backgrounds - deep, sophisticated */
+    --background: 220 15% 4%;
+    --foreground: 40 10% 95%;
 
-    --card: 220 20% 5%;
-    --card-foreground: 0 0% 98%;
+    --card: 220 15% 7%;
+    --card-foreground: 40 10% 95%;
 
-    --popover: 220 20% 5%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 15% 7%;
+    --popover-foreground: 40 10% 95%;
 
-    /* Lifestyle gradient theme - Blue to Pink to Orange */
-    --primary: 217 100% 65%; /* #4E93FF */
-    --primary-foreground: 0 0% 100%;
+    /* Primary - Warm Copper/Bronze */
+    --primary: 28 70% 55%;
+    --primary-foreground: 220 15% 4%;
 
-    --primary-light: 215 86% 70%; /* #639CF2 */
-    --primary-glow: 195 100% 94%; /* #E4F9FF */
+    --primary-light: 28 60% 65%;
+    --primary-glow: 28 80% 75%;
 
-    --secondary: 320 98% 74%; /* #FF7EEA */
-    --secondary-foreground: 0 0% 100%;
+    /* Secondary - Soft Platinum */
+    --secondary: 220 10% 85%;
+    --secondary-foreground: 220 15% 10%;
 
-    --accent: 27 100% 55%; /* #F38300 */
-    --accent-foreground: 0 0% 100%;
+    /* Accent - Deep Bronze */
+    --accent: 25 65% 45%;
+    --accent-foreground: 40 10% 95%;
 
-    --accent-red: 356 100% 56%; /* #F3DDID approximation */
+    /* Muted - Sophisticated grays */
+    --muted: 220 15% 12%;
+    --muted-foreground: 220 10% 55%;
 
-    --muted: 220 20% 12%;
-    --muted-foreground: 0 0% 60%; /* #999 */
-
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 15%;
-    --input: 220 20% 15%;
-    --ring: 217 100% 65%;
+    --border: 220 15% 15%;
+    --input: 220 15% 15%;
+    --ring: 28 70% 55%;
 
-    --radius: 1.2rem;
+    --radius: 0.5rem;
 
-    /* Lifestyle editorial tokens */
-    --editorial-text: 0 0% 98%;
-    --editorial-text-light: 220 15% 65%;
-    --editorial-tag: 217 100% 70%;
-    --editorial-tag-bg: 220 20% 12%;
-    --editorial-hover: 220 20% 8%;
+    /* Premium tokens */
+    --premium-gold: 40 80% 55%;
+    --premium-copper: 28 70% 55%;
+    --premium-platinum: 220 10% 85%;
+    --premium-charcoal: 220 15% 8%;
+    --premium-charcoal-deep: 220 15% 4%;
 
-    /* Gradient definitions - Orange to Blue inspired */
+    /* Gradient definitions */
     --gradient-primary: linear-gradient(
       135deg,
-      hsl(27 100% 55%),
-      hsl(217 100% 65%)
+      hsl(28 70% 55%),
+      hsl(40 80% 55%)
     );
     --gradient-hero: linear-gradient(
-      135deg,
-      hsl(27 100% 55%) 0%,
-      hsl(14 100% 57%) 30%,
-      hsl(290 90% 60%) 60%,
-      hsl(217 100% 65%) 100%
+      180deg,
+      hsl(220 15% 4%) 0%,
+      hsl(220 15% 8%) 50%,
+      hsl(220 15% 4%) 100%
     );
-    --gradient-accent: linear-gradient(
+    --gradient-subtle: linear-gradient(
+      135deg,
+      hsl(220 15% 6%),
+      hsl(220 15% 10%)
+    );
+    --gradient-copper: linear-gradient(
       90deg,
-      hsl(27 100% 55%),
-      hsl(14 100% 57%),
-      hsl(217 100% 65%)
+      hsl(28 70% 45%),
+      hsl(28 70% 55%),
+      hsl(40 80% 60%)
     );
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217 100% 65%;
+    --sidebar-background: 220 15% 4%;
+    --sidebar-foreground: 40 10% 95%;
+    --sidebar-primary: 28 70% 55%;
+    --sidebar-primary-foreground: 220 15% 4%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 40 10% 95%;
+    --sidebar-border: 220 15% 15%;
+    --sidebar-ring: 28 70% 55%;
   }
 
   .dark {
-    --background: 220 20% 8%;
-    --foreground: 220 15% 95%;
+    --background: 220 15% 4%;
+    --foreground: 40 10% 95%;
 
-    --card: 220 20% 10%;
-    --card-foreground: 220 15% 95%;
+    --card: 220 15% 7%;
+    --card-foreground: 40 10% 95%;
 
-    --popover: 220 20% 10%;
-    --popover-foreground: 220 15% 95%;
+    --popover: 220 15% 7%;
+    --popover-foreground: 40 10% 95%;
 
-    --primary: 217 100% 70%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 28 70% 55%;
+    --primary-foreground: 220 15% 4%;
 
-    --primary-light: 215 86% 75%;
-    --primary-glow: 195 100% 30%;
+    --primary-light: 28 60% 65%;
+    --primary-glow: 28 80% 75%;
 
-    --secondary: 320 98% 80%;
-    --secondary-foreground: 220 20% 10%;
+    --secondary: 220 10% 85%;
+    --secondary-foreground: 220 15% 10%;
 
-    --accent: 27 100% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 25 65% 45%;
+    --accent-foreground: 40 10% 95%;
 
-    --accent-red: 356 100% 60%;
+    --muted: 220 15% 12%;
+    --muted-foreground: 220 10% 55%;
 
-    --muted: 220 20% 15%;
-    --muted-foreground: 0 0% 60%; /* #999 */
-
-    --destructive: 0 62.8% 50%;
+    --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 20%;
-    --input: 220 20% 20%;
-    --ring: 217 100% 70%;
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 28 70% 55%;
 
-    --editorial-text: 220 15% 92%;
-    --editorial-text-light: 220 15% 65%;
-    --editorial-tag: 217 100% 70%;
-    --editorial-tag-bg: 217 40% 20%;
-    --editorial-hover: 220 20% 12%;
-
-    --gradient-primary: linear-gradient(
-      135deg,
-      hsl(27 100% 60%),
-      hsl(217 100% 70%)
-    );
-    --gradient-hero: linear-gradient(
-      135deg,
-      hsl(27 100% 60%) 0%,
-      hsl(14 100% 62%) 30%,
-      hsl(290 90% 65%) 60%,
-      hsl(217 100% 70%) 100%
-    );
-    --gradient-accent: linear-gradient(
-      90deg,
-      hsl(27 100% 60%),
-      hsl(14 100% 62%),
-      hsl(217 100% 70%)
-    );
-
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 217 100% 70%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217 100% 70%;
+    --sidebar-background: 220 15% 4%;
+    --sidebar-foreground: 40 10% 95%;
+    --sidebar-primary: 28 70% 55%;
+    --sidebar-primary-foreground: 220 15% 4%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 40 10% 95%;
+    --sidebar-border: 220 15% 15%;
+    --sidebar-ring: 28 70% 55%;
   }
 }
 
@@ -163,7 +143,7 @@ All colors MUST be HSL.
     -moz-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 2;
+    line-height: 1.7;
   }
 
   @media (min-width: 40em) {
@@ -171,13 +151,19 @@ All colors MUST be HSL.
       font-size: 1.125rem;
     }
   }
+
+  /* Premium selection */
+  ::selection {
+    background: hsl(28 70% 55% / 0.3);
+    color: hsl(40 10% 95%);
+  }
 }
 
-/* Add the keyframes definition */
+/* Premium Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -185,163 +171,231 @@ All colors MUST be HSL.
   }
 }
 
-@layer components {
-  .blog-feed__item {
+@keyframes fadeIn {
+  from {
     opacity: 0;
-    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@layer components {
+  /* Animation classes */
+  .animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
   }
 
-  .blog-feed__item.animate-fadeInUp {
-    animation: fadeInUp 0.3s ease-out forwards;
+  .animate-fadeIn {
+    animation: fadeIn 0.6s ease-out forwards;
   }
 
-  /* Stagger delays for grid layouts */
-  @media (min-width: 32em) {
-    .blog-feed__item:nth-child(2).animate-fadeInUp {
-      animation-delay: 150ms;
-    }
+  .animate-slideInLeft {
+    animation: slideInLeft 0.8s ease-out forwards;
   }
 
-  @media (min-width: 60em) {
-    .blog-feed__item:nth-child(2).animate-fadeInUp {
-      animation-delay: 150ms;
-    }
-    .blog-feed__item:nth-child(3).animate-fadeInUp {
-      animation-delay: 300ms;
-    }
+  .animate-scaleIn {
+    animation: scaleIn 0.6s ease-out forwards;
   }
 
-  /* Fluid typography for article titles */
-  .fluid-title {
-    font-size: clamp(2.5rem, 8vw + 0.625rem, 12.5rem);
-    line-height: 0.9;
-    letter-spacing: -0.03em;
+  /* Staggered animations */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+
+  /* Premium hover effects */
+  .hover-lift {
+    @apply transition-all duration-500 ease-out;
+  }
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px hsl(28 70% 55% / 0.15);
   }
 
-  @media (min-width: 768px) {
-    .fluid-title {
-      font-size: clamp(5rem, 10vw + 1.25rem, 15rem);
-    }
+  /* Premium button styles */
+  .btn-premium {
+    @apply relative overflow-hidden px-8 py-4 font-medium tracking-wide;
+    @apply bg-primary text-primary-foreground;
+    @apply transition-all duration-300 ease-out;
+  }
+  .btn-premium::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent;
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+  }
+  .btn-premium:hover::before {
+    transform: translateX(100%);
+  }
+  .btn-premium:hover {
+    @apply scale-[1.02];
+    box-shadow: 0 10px 30px -5px hsl(28 70% 55% / 0.4);
   }
 
-  @media (min-width: 1024px) {
-    .fluid-title {
-      font-size: clamp(6.25rem, 12vw + 1.875rem, 18.75rem);
-    }
+  /* Premium underline effect */
+  .link-underline {
+    @apply relative inline-block;
+  }
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-px bg-primary;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+  }
+  .link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
   }
 
-  /* Grid System - Article Layout (Tailwind @layer components) */
-  @layer components {
-    /* Main Article Grid Container */
-    .article-grid {
-      @apply grid w-full max-w-[1920px] mx-auto gap-0;
-      @apply grid-cols-18 mb-[2.734375rem];
-      @apply md:grid-cols-22;
-      @apply lgPlus:grid-cols-30 lgPlus:mb-[3.75rem];
-    }
-
-    /* Article Header Grid - Grid for navigation without vertical margins */
-    .article-header-grid {
-      @apply grid w-full max-w-[1920px] mx-auto gap-0;
-      @apply grid-cols-18;
-      @apply md:grid-cols-22;
-      @apply lgPlus:grid-cols-30;
-    }
+  /* Section containers */
+  .section-container {
+    @apply w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20;
   }
 
-    /* Article Body - Narrow reading width with responsive typography */
-    .article-body {
-      @apply col-start-2 col-span-16;
-      @apply md:col-start-3 md:col-span-18;
-      @apply lgPlus:col-start-8 lgPlus:col-span-16;
-      @apply text-[1.125rem] leading-[1.45] tracking-[-0.01em];
-      @apply md:text-[1.5rem];
-      @apply lgPlus:text-[1.625rem];
-      @apply 3xl:text-[2.25rem];
-    }
-
-    /* Article Standard Content - Standard width, no typography */
-    .article-content-standard {
-      @apply col-start-2 col-span-16;
-      @apply md:col-start-3 md:col-span-18;
-      @apply lgPlus:col-start-3 lgPlus:col-span-19;
-    }
-
-    /* Article Hero - Narrow width for hero content */
-    .article-hero {
-      @apply col-start-2 col-span-16;
-      @apply md:col-start-3 md:col-span-18;
-      @apply lgPlus:col-start-8 lgPlus:col-span-16;
-    }
-
-    /* Article Wide Content - For wider layouts */
-    .article-wide-content {
-      @apply self-center;
-      @apply col-start-2 col-span-16;
-      @apply md:col-start-3 md:col-span-18;
-      @apply lgPlus:col-start-3 lgPlus:col-span-19;
-    }
-
-    /* Article Centered Content - Extra narrow, centered */
-    .article-centered-content {
-      @apply self-center;
-      @apply col-start-2 col-span-16;
-      @apply md:col-start-3 md:col-span-18;
-      @apply lgPlus:col-start-9 lgPlus:col-span-14;
-    }
-
-    /* Article Full Width - Spans entire grid */
-    .article-full-width {
-      @apply col-span-full self-center;
-    }
-
-    /* Article Two Column Grid - For related articles, blog listings */
-    .article-two-columns {
-      @apply list-none m-0 p-0 grid gap-12;
-      @apply md:grid-cols-2 md:gap-[70px];
-      @apply lgPlus:gap-24;
-      @apply 3xl:gap-32;
-    }
-
-    /* Article Column Left - Left side of two-column layout */
-    .article-column-left {
-      @apply col-start-1 col-end-9;
-      @apply md:col-start-1 md:col-end-11;
-      @apply lgPlus:col-start-1 lgPlus:col-end-15;
-    }
-
-    /* Article Column Right - Right side of two-column layout */
-    .article-column-right {
-      @apply col-start-10 col-end-[-1];
-      @apply md:col-start-12 md:col-end-[-1];
-      @apply lgPlus:col-start-16 lgPlus:col-end-[-1];
-    }
-    /* Article Section Grid - For section-based layouts */
-    .article-section-grid {
-      @apply grid w-full max-w-[1920px] gap-0;
-      @apply grid-cols-18 my-5;
-      @apply md:grid-cols-22 md:my-[2.734375rem];
-      @apply lgPlus:grid-cols-30 lgPlus:my-[3.75rem];
-      @apply 3xl:my-20;
-    }
-
-    /* Article Section Content - Inner grid for sections */
-    .article-section-content {
-      @apply grid w-full max-w-[1920px] gap-0;
-      @apply grid-cols-16 my-8 mb-12;
-      @apply md:grid-cols-18;
-      @apply lgPlus:grid-cols-26;
-    }
-
-    /* Article Wrapper Full - Full width wrapper */
-    .article-wrapper-full {
-      @apply col-span-full;
-    }
-
-    /* Article Wrapper Constrained - Constrained width wrapper */
-    .article-wrapper-constrained {
-      @apply col-start-2 col-span-16;
-      @apply md:col-start-3 md:col-span-18;
-      @apply lgPlus:col-start-3 lgPlus:col-span-26;
-    }
+  .section-narrow {
+    @apply w-full max-w-[900px] mx-auto px-6 md:px-12;
   }
+
+  /* Grid layouts */
+  .grid-premium {
+    @apply grid gap-8 md:gap-12;
+  }
+
+  /* Card styles */
+  .card-premium {
+    @apply bg-card border border-border p-8 md:p-10;
+    @apply transition-all duration-500 ease-out;
+  }
+  .card-premium:hover {
+    @apply border-primary/30;
+    box-shadow: 0 0 40px -10px hsl(28 70% 55% / 0.2);
+  }
+
+  /* Typography classes */
+  .heading-display {
+    @apply font-serif font-bold tracking-tight;
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+    line-height: 1.1;
+  }
+
+  .heading-section {
+    @apply font-serif font-semibold tracking-tight;
+    @apply text-3xl md:text-4xl lg:text-5xl;
+    line-height: 1.2;
+  }
+
+  .heading-subsection {
+    @apply font-sans font-semibold tracking-tight;
+    @apply text-xl md:text-2xl;
+    line-height: 1.3;
+  }
+
+  .body-large {
+    @apply text-lg md:text-xl text-muted-foreground leading-relaxed;
+  }
+
+  .label-premium {
+    @apply text-xs font-medium uppercase tracking-[0.2em] text-primary;
+  }
+
+  /* Divider */
+  .divider-gradient {
+    @apply h-px w-full;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(28 70% 55% / 0.5),
+      transparent
+    );
+  }
+
+  /* Stats styling */
+  .stat-number {
+    @apply font-serif font-bold text-5xl md:text-6xl lg:text-7xl text-primary;
+    line-height: 1;
+  }
+
+  /* Legacy grid support */
+  .article-grid {
+    @apply grid w-full max-w-[1920px] mx-auto gap-0;
+    @apply grid-cols-18 mb-[2.734375rem];
+    @apply md:grid-cols-22;
+    @apply lgPlus:grid-cols-30 lgPlus:mb-[3.75rem];
+  }
+
+  .article-header-grid {
+    @apply grid w-full max-w-[1920px] mx-auto gap-0;
+    @apply grid-cols-18;
+    @apply md:grid-cols-22;
+    @apply lgPlus:grid-cols-30;
+  }
+
+  .article-wrapper-constrained {
+    @apply col-start-2 col-span-16;
+    @apply md:col-start-3 md:col-span-18;
+    @apply lgPlus:col-start-3 lgPlus:col-span-26;
+  }
+
+  .article-hero {
+    @apply col-start-2 col-span-16;
+    @apply md:col-start-3 md:col-span-18;
+    @apply lgPlus:col-start-8 lgPlus:col-span-16;
+  }
+
+  .article-body {
+    @apply col-start-2 col-span-16;
+    @apply md:col-start-3 md:col-span-18;
+    @apply lgPlus:col-start-8 lgPlus:col-span-16;
+    @apply text-[1.125rem] leading-[1.45] tracking-[-0.01em];
+    @apply md:text-[1.5rem];
+    @apply lgPlus:text-[1.625rem];
+    @apply 3xl:text-[2.25rem];
+  }
+
+  .article-full-width {
+    @apply col-span-full self-center;
+  }
+}
