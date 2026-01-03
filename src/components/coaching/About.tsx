@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { CheckCircle2 } from "lucide-react";
-
+import coachImage from "@/assets/coach-lincoln.jpg";
 const credentials = [
   "Solution-Focused Certified Coach",
   "30+ Years Leadership Experience",
@@ -46,7 +46,7 @@ const About = () => {
             {/* Main image */}
             <div className="relative aspect-[4/5] bg-gradient-to-br from-muted to-card overflow-hidden">
               <img 
-                src="/images/pexels-kadeem-stewart-170429769-15786936.jpg" 
+                src={coachImage} 
                 alt="Lincoln Anthony - Leadership Elevation Coach"
                 className="w-full h-full object-cover"
               />
