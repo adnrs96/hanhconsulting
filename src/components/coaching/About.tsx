@@ -43,18 +43,13 @@ const About = () => {
             <div className="absolute -inset-4 border border-primary/20" />
             <div className="absolute -inset-8 border border-primary/10" />
             
-            {/* Main image placeholder - replace with actual coach photo */}
+            {/* Main image */}
             <div className="relative aspect-[4/5] bg-gradient-to-br from-muted to-card overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-4xl font-serif text-primary">LA</span>
-                  </div>
-                  <p className="text-muted-foreground text-sm">
-                    Lincoln Anthony<br />Leadership Elevation Coach
-                  </p>
-                </div>
-              </div>
+              <img 
+                src="/images/pexels-kadeem-stewart-170429769-15786936.jpg" 
+                alt="Lincoln Anthony - Leadership Elevation Coach"
+                className="w-full h-full object-cover"
+              />
               
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
